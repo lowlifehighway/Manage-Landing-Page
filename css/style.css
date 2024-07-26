@@ -1,0 +1,337 @@
+:root {
+  --BrightRed: hsl(12, 88%, 59%);
+  --DarkBlue: hsl(228, 39%, 23%);
+
+  --DarkGrayishBlue: hsl(227, 12%, 61%);
+  --VeryDarkBlue: hsl(233, 12%, 13%);
+  --VeryPaleRed: hsl(13, 100%, 96%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  overflow-x: hidden;
+}
+.hidden {
+  display: none;
+}
+/* .body {
+} */
+header,
+section,
+footer,
+.attribution {
+  padding: 5.4rem 16.4rem;
+}
+header {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+header nav {
+  display: flex;
+  gap: 3.6rem;
+  justify-self: center;
+}
+.nav-links:link,
+.nav-links:visited {
+  color: var(--DarkGrayishBlue);
+}
+.icon-hamburger {
+  display: none;
+}
+header div {
+  justify-self: end;
+}
+.get-started-btn {
+  display: inline-block;
+  padding: 1.6rem 3.6rem;
+  background-color: var(--BrightRed);
+  border-radius: 3rem;
+  color: var(--VeryLightGray);
+  width: fit-content;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+.get-started-btn:hover {
+  opacity: 0.75;
+  box-shadow: 0rem 0.4rem 3.6rem var(--BrightRed);
+}
+#section1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 8.2rem;
+}
+.hero-section-div {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+h1 {
+  font-size: 7.2rem;
+  font-weight: 700;
+  color: var(--DarkBlue);
+  line-height: 8rem;
+}
+.h1-p {
+  color: var(--DarkGrayishBlue);
+  width: 50rem;
+  font-size: 2.3rem;
+  line-height: 3.2rem;
+  text-align: inherit;
+}
+.illustration-intro-div {
+  width: 100%;
+}
+.illustration-intro-div img {
+  width: 100%;
+}
+
+#section2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+  margin-bottom: 8.2rem;
+}
+.section2-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+h2 {
+  font-size: 4.8rem;
+  line-height: 5.2rem;
+  color: var(--DarkBlue);
+}
+#section2 > div > p {
+  color: var(--DarkGrayishBlue);
+  grid-column: 2/-1;
+  font-size: 2.3rem;
+  line-height: 3.2rem;
+  width: 50rem;
+}
+
+#section2 div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+#section2 div ul li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+#section2 > div > ul > li > p {
+  color: var(--DarkGrayishBlue);
+  grid-column: 2/-1;
+  font-size: 2.3rem;
+  line-height: 3.2rem;
+  /* width: 50rem; */
+}
+
+.section2-count {
+  color: var(--VeryLightGray);
+  padding: 0.8rem 2.4rem;
+  border-radius: 1.6rem;
+  background-color: var(--BrightRed);
+}
+
+#section3 {
+  display: flex;
+  flex-direction: column;
+  gap: 5.4rem;
+  /* justify-content: center; */
+  align-items: center;
+  margin-bottom: 8.2rem;
+}
+#section3 > p {
+  font-size: 5.6rem;
+  font-weight: 700;
+  color: var(--DarkBlue);
+}
+#section3 > div {
+  align-self: normal;
+  position: relative;
+}
+.carousel-inner {
+  display: flex;
+  gap: 3.6rem;
+
+  overflow-x: auto;
+  cursor: default;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.carousel-inner::-webkit-scrollbar {
+  display: none;
+}
+.carousel-before,
+.carousel-after {
+  position: absolute;
+  top: 50%;
+  padding: 2.1rem 2.4rem;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 1.2rem 1.6rem 0 rgba(0, 0, 0, 0.24),
+    0 1.7rem 5rem 0 rgba(0, 0, 0, 0.19);
+}
+.carousel-before {
+  left: 0;
+  transform: translate(-50%, 50%);
+}
+.carousel-after {
+  right: 0;
+  transform: translate(50%, 50%);
+}
+.dragging {
+  user-select: none;
+  cursor: grab;
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+}
+.no-transition {
+  scroll-behavior: auto !important;
+}
+.carousel-card {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+
+  padding: 6.4rem 3.6rem;
+  border-radius: 3.6rem;
+  padding-top: 7.2rem;
+  margin-top: 6.4rem;
+  background-color: var(--VeryLightGray);
+
+  position: relative;
+}
+.carousel-card div {
+  width: fit-content;
+}
+.carousel-card img {
+  width: 10rem;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+}
+.carousel-card span {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+.carousel-card p {
+  text-align: center;
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+  width: 64rem;
+  color: var(--DarkGrayishBlue);
+}
+
+#section4 {
+  background-color: var(--BrightRed);
+  background: linear-gradient(to right, var(--BrightRed), var(--DarkBlue));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#section4 > h2 {
+  color: #ffffff;
+  width: 60rem;
+}
+.get-started-btn-inverse {
+  background-color: white;
+  color: var(--BrightRed);
+}
+
+footer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: var(--VeryDarkBlue);
+  color: var(--VeryLightGray);
+}
+.footer-logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.social-links {
+  display: flex;
+  gap: 1.6rem;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-links div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.footer-link:link,
+.footer-link:visited {
+  color: #ffffff;
+}
+.footer-link:hover {
+  color: var(--BrightRed);
+}
+
+.footer-updates-div {
+  justify-self: end;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.footer-updates-div input,
+.footer-updates-div input:focus-visible {
+  color: var(--DarkGrayishBlue);
+  background-color: #ffffff;
+
+  font-size: 1.6rem;
+  padding: 2rem 4.2rem;
+  border-radius: 4.2rem;
+  /* height: fit-content; */
+  outline: none;
+}
+.footer-updates-div a {
+  color: #ffffff;
+  background-color: var(--BrightRed);
+  padding: 2rem 3rem;
+  border-radius: 3rem;
+  transition: all 0.3s ease;
+}
+
+.footer-updates-div a:hover {
+  background-color: hsl(12, 79%, 65%);
+}
+.cc {
+  grid-column-start: -2;
+  justify-self: end;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  background-color: var(--VeryDarkBlue);
+  color: var(--DarkGrayishBlue);
+  padding-top: 0;
+}
+.attribution a {
+  color: var(--BrightRed);
+}
