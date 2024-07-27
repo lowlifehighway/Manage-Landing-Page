@@ -160,7 +160,7 @@ h2 {
   align-items: center;
   margin-bottom: 8.2rem;
 }
-#section3 > p {
+#section3 > h2 {
   font-size: 5.6rem;
   font-weight: 700;
   color: var(--DarkBlue);
